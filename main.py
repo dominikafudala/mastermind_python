@@ -1,4 +1,5 @@
 import random
+import interface
 
 attempts = 12
 solution = [random.randrange(1, 7, 1) for i in range(1, 5)]
