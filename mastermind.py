@@ -29,7 +29,6 @@ class mastermind(RegulyGry):
         self.__solution = [random.randrange(1, 7, 1) for i in range(1, 5)]
         self.__allUserGuesses = []
         self.__listInfo = []
-        print(self.__solution)
 
     def guess(self, userGuess):
         if self.__attempts > 0:
