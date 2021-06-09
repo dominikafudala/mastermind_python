@@ -45,6 +45,14 @@ class TestMastermind(unittest.TestCase):
         game1._mastermind__solution = [1, 2, 3, 4]
         self.assertEqual(game1.userInputGuess("1234"), "wygrana")
 
+    def test_defeat(self):
+        game1 = mastermind.mastermind()
+        game1._mastermind__solution = [1, 2, 3, 4]
+        for i in range(11):
+            game1.userInputGuess("1111")
+
+        self.assertEqual(game1.userInputGuess("1111")[2], 0)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
